@@ -1,0 +1,11 @@
+Errors:
+
+400: incorrect data body sended
+401: unAuthorized (may be iam user and admin not allowed)
+403: api don'i work in this environment (like more than servers)
+404: incorrect path or url
+409: duplicated params
+500: internal server error
+
+success
+200

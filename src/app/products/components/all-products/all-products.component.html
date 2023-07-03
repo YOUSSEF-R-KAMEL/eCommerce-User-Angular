@@ -1,0 +1,13 @@
+<div class="mt-4 mb-4">
+  <app-select [items]="categories" title="Categories" (selectedData)="filterCategory($event)"></app-select>
+</div>
+
+<div class="row" *ngIf="!loading">
+  <div class="col-sm-12 col-md-4 col-lg-3 mb-4" *ngFor="let item of products">
+    <app-product [item]="item" (SelectedItem)="addToCard($event)"></app-product>
+  </div>
+</div>
+
+<div *ngIf="loading" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+  <app-spinner></app-spinner>
+</div>

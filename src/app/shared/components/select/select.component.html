@@ -1,0 +1,9 @@
+<p> {{ title }}: </p>
+  <div class="row">
+    <div class="col-3">
+      <select class="form-control" (change)="filter($event)">
+        <option value="all">All</option>
+        <option *ngFor="let item of items" value="{{ item }}">{{ item }}</option>
+      </select>
+    </div>
+  </div>

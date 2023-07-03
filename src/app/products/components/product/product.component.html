@@ -1,0 +1,17 @@
+<div class="card">
+  <div routerLink="/details/{{item.id}}">
+    <div class="image text-center">
+      <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+    </div>
+    <div class="card-body h-100">
+      <h4 class="card-title">{{item.title}}</h4>
+      <p class="card-text">{{item.description.replace(item.description.substring(50), "...")}}</p>
+    </div>
+  </div>
+    <button class="btn btn-primary addToCard" *ngIf="!addCard" (click)="addCard = true">Add To Card</button>
+    <div class="d-flex w-50 addContainer" *ngIf="addCard">
+        <input type="number" class="form-control" [(ngModel)]="amount">
+      <button class="btn btn-success ms-3" (click)="add(); addCard = false">Add</button>
+    </div>
+    <span class="salary">{{item.price}} L.E</span>
+</div>
